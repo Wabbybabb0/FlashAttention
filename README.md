@@ -3,13 +3,9 @@
 ## 关于调试
 为了便于调试，使用libtorch——提供对PyTorch模型和算子的原生C++支持，可以在不依赖Python的情况下调试CUDA。(思路来自比飞鸟贵重的多_HKL)
 ## 关于代码
-<<<<<<< HEAD
 `example-app.cpp`是测试libtorch是否可以用的例程，具体见[libtorch-demo测试](https://pytorch.org/cppdocs/installing.html)
 `falsh_learn.cu`是实现forward CUDA核心逻辑的文件
 `falsh-atten-main.cpp`是主程序
 
-=======
-'example-app.cpp'是测试libtorch是否可以用的例程，具体见[libtorch-demo测试](https://pytorch.org/cppdocs/installing.html)
-'falsh_learn.cu'是实现forward CUDA核心逻辑的文件
-'falsh-atten-main.cpp'是主程序
->>>>>>> 70dcce661d6ae0c430d97e93c9fe75a8bb4894ea
+
+
