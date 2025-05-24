@@ -73,19 +73,13 @@ __global__ void forward_learn_kernel(const float *Q, const float *K, const float
                     pv += S_s[tid * Bc + x] * V_s[x * d + y];
                 }
                 O_start[i * Br * d + tid * d + y] = 1 / row_l_new * (row_l_prev * __expf(row_m_prev - row_m_new) * O_start[i * Br * d + tid * d + y] + __expf(row_m - row_m_new) * pv);
-                if(blockIdx.x == 1 && blockIdx.y == 1 && i == 2 && j == 2 && y == d-1){
-                    if(tid < 4){
-                        printf("my_flash_learn: tid = %d:\n output = %f\n", tid, O_start[i * Br * d + tid * d + y]);
-                    }
-                }
             }
-            m_start[i * Br * d] = row_m_new;
-            l_start[i * Br * d] = row_l_new;
+            m_start[i * Br + tid] = row_m_new;
+            l_start[i * Br + tid] = row_l_new;
         }
         __syncthreads();
     } 
 }
-
 
 
 torch::Tensor forward_learn(torch::Tensor Q, torch::Tensor K, torch::Tensor V){
