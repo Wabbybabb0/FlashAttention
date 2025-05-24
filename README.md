@@ -1,7 +1,7 @@
 # FlashAttention 小复现
 这是一个根据b站up主“比飞鸟贵重的多_HKL”的FlahAttention视频来学习的[Flash Attention学习过程 - bilibili](https://www.bilibili.com/video/BV1FM9XYoEQ5/?spm_id_from=333.999.0.0&vd_source=1e1c4d48c6129699686897a835e568ea)
 
-环境配置情况等更详细的情况可以到[我的小博客](https://wabbybabb0.github.io/2025/04/29/flashattention-mini/)小博客瞅瞅
+环境配置情况等更详细的情况可以到[我的小博客](https://wabbybabb0.github.io/2025/04/29/flashattention-mini/)瞅瞅
 
 ## 关于调试
 为了便于调试，使用libtorch——提供对PyTorch模型和算子的原生C++支持，可以在不依赖Python的情况下调试CUDA。(思路来自比飞鸟贵重的多_HKL)
